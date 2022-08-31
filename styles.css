@@ -1,0 +1,17 @@
+body {
+    background-color: linen;
+ }
+ h1 {
+    color: rgb(128, 0, 79);
+    margin-left: 40px;
+ }
+h2 {
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+h2 {
+    color: darkgreen;
+}
+
+aside {
+    font-family:cursive
+}

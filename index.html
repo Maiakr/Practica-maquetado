@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="styles.css" type="text/css"/>
+<link href="bootstrap.min.css" rel="stylesheet">
+<title>Maia Kruselniski Portfolio</title>
+</head>
+<body>
+  <img src = https://www.mundoflores.net/imagenes/flor-de-loto-735x450.jpg class= "rounded float-end"alt =
+  "Flor">
+  <div>
+  <h1>Maia Kruselniski</h1>
+  </div>
+ 
+<div class="card mat-card"> <div id="Nombre"> </div> </div>
+
+<div class="card mat-card"> <div id="Apellido"> </div> </div>
+
+<div class="card mat-card"> <div id="Conocimientos"> </div> </div>
+ 
+
+ <div class="card mat-card" id="1">
+   <div class="card-titles">
+    <div>
+      <input id="edit-datospersonales" type="text" oninput="escribir_datospersonales(this.value)"style="display:none">
+    </div>
+    <input type="file" id="file1" onchange="showfile(this)">
+    
+     
+   
+    <h2>Datos Personales</h2>
+    <div class="btn-edit" onclick="editar_datospersonales()"><class="btn-right"><i class="fa fa-pen"></i></a></div>
+</div>
+</div>
+<div>
+  <p id="text-datospersonales">
+ <li>Maia Kruselniski</li>
+ <li>Fecha de Nacimiento: </li>
+ <li>Telefono de contacto:</li>
+</p>
+</div>
+<div>
+ 
+ </div>
+
+ <button type="button" class="btn btn-success">Educación</button>
+ <section><h2>Educación</h2>Educación</section>
+
+ <button type="button" class="btn btn-success">Trabajos</button>
+ <section><h2>Trabajos</h2></section>
+
+ <button type="button" class="btn btn-success">Conocimientos</button>
+
+
+ <section><h2>Conocimientos</h2></section>
+ <a href="https://ar.linkedin.com/in/maia-kruselniski-a4493b13b?original_referer=https%3A%2F%2Fwww.google.com%2F">linkedin</a>
+<article>Desarrollo Full stack</article>
+<div>
+<aside>"Me defino como una mente inquieta, siempre en busca de aprender cosas nuevas." </aside>
+
+<address>maiakrusel@gmail.com</address>
+</div>
+<form>
+
+    <div class="mb-3">
+
+      <label for="idE" class="form-label">Correo</label>
+
+      <input type="email" class="form-control" id="idE" aria-describedby ="idEH">
+
+      <div id="idEH" class="form-text">Debe ser un correo válido.</div>
+
+    </div>
+
+    <div class="mb-3">
+
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+
+      <input type="password" class="form-control" id="exampleInputPassword1">
+
+    </div>
+
+    <div class="mb-3 form-check">
+
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+
+      <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+
+</form>
+ <!-- Bootstrap JS -->
+ <script src="bootstrap.bundle.min.js"></script>
+ <script src="objetos.js"></script>
+ <script>
+  function foo(){
+    var undefinied = 2; //bad idea!
+    console.log(undefined*2);
+    var newDiv = document.createElement ("div");
+    var newContent = document.createTextNode ("Hola ¿Que tal?");
+    newDiv.appendChild(newContent); //añade texto al creado,
+    //añade el elemento creado y su contenido al DOM
+     var currentDiv = document.getElementById ("1");
+    document.body.insertBefore (newDiv, currentDiv);
+  }
+  foo();
+  </script>
+  <script>
+  //funcion que
+  // cambia el estilo del input a visible
+  //toma el valor del texto del parrafo con el id "text-datospersonales"
+  //lo muestra en consola
+  function cambiar_parrafo(){
+    document.getElementById("edit.datospersonales").style.display="block";
+    let texto = document.getElementById("text-datospersonales").innerText;
+    console.log(texto);
+  };
+  function myFunction2(valor){
+    document.getElementById("text-datospersonales").innerText=valor;
+  };
+//controla si presiono un enter
+let textarea=document.getElementById("edit-datospersonales")
+textarea.addEventListener('keyup' , (e) => {
+  logMessage('key "${e.key}" released [event: keyup]');
+  if (e.key=="Enter"){
+  document.getElementById("edit-datospersonales").style.display="none"
+}
+});
+  //carga el contenido de un archivo de texto
+  //y lo muestra en el parrafo
+    function showfile(input) { 
+    let file =input.files[0];
+    alert(`File name: ${file.name}`); //e.g my.png
+    alert(`Last modified: ${file.lastModified}`); //e.g 1558222888899
+  
+    let reader = new FileReader();
+    reader.readAsText(file);
+    reader.onload = function(){
+      console.log(reader.result);
+      document.getElementById("text-datospersonales").innerText.result;
+    };
+    reader.oneerror = function(){
+       console.log(reader.error);
+    };
+  }
+ 
+</script>
+</body>
+</html>
